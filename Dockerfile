@@ -1,7 +1,13 @@
-FROM mcr.microsoft.com/mssql/server:2019-latest
+# השתמש בתמונה הרשמית של MySQL
+FROM mysql:latest
+USER root
 
-ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=YourStrong!Passw0rd
-ENV MSSQL_PID=Developer
+# הגדרת משתני סביבה
+ENV MYSQL_ROOT_PASSWORD=root_password
+ENV MYSQL_DATABASE=my_database
+ENV MYSQL_USER=my_user
+ENV MYSQL_PASSWORD=my_password
 
-EXPOSE 1433
+# חשיפת הפורט של MySQL
+EXPOSE 3306
+
