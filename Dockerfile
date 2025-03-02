@@ -10,4 +10,5 @@ ENV MYSQL_PASSWORD=my_password
 
 # חשיפת הפורט של MySQL
 EXPOSE 3306
-
+EXPOSE 33060
+CMD ["mysqld"]
